@@ -4,16 +4,15 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using WebApiDemo.Filter;
 
 namespace WebApiDemo.Controllers
 {
-    public class TestController : ApiController
+    /// <summary>
+    /// 控制器基类
+    /// </summary>
+    [ApiExceptionFilter]
+    public class BaseApiController : ApiController
     {
-
-        // DELETE: api/Test/5
-        public IHttpActionResult Test(int id)
-        {
-            return Ok();
-        }
     }
 }
